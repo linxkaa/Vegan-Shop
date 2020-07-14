@@ -1,0 +1,327 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Poppins", sans-serif; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+i {
+  font-style: normal; }
+
+header {
+  height: 100vh;
+  background-image: url(https://edyoda.s3.ap-south-1.amazonaws.com/public/landing-background.png); }
+
+#menu__item {
+  font-size: 1.4rem;
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  background-color: transparent;
+  justify-content: space-between;
+  z-index: 999;
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: background-color 200ms linear; }
+  #menu__item img {
+    width: 4rem;
+    height: 4rem;
+    margin-left: 2rem; }
+  #menu__item .menu__item-right .dropdown-container {
+    width: 200px;
+    border-top: 2px solid #aad236;
+    padding: 20px;
+    font-weight: 400;
+    position: absolute;
+    right: 20px;
+    margin-top: 1rem;
+    background-color: white;
+    box-shadow: 0 2px 5px #ccc;
+    display: none; }
+  #menu__item .menu__item-right .menu__item-right-with-dropdown:hover .dropdown-container {
+    display: block; }
+  #menu__item .menu__item-right .dropdown-item a {
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding: 1rem;
+    cursor: pointer; }
+  #menu__item .menu__item-right .menu__item-right-with-dropdown {
+    display: inline-block;
+    position: relative; }
+  #menu__item .menu__item-right .fa-caret-down::before {
+    content: "\f0d7"; }
+  #menu__item .menu__item-right a {
+    padding: 2rem; }
+  #menu__item .menu__item-right .menu__item-right-buynow {
+    margin: 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    background-color: #aad236;
+    padding: 0.9rem 3.4rem;
+    border-radius: 0.4rem; }
+
+.content-header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .content-header h1 {
+    font-size: 4.4rem;
+    font-weight: 600;
+    letter-spacing: 0.9rem; }
+  .content-header p {
+    padding: 2rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    color: #8b8b99;
+    text-align: center;
+    line-height: 2rem;
+    width: 60vw; }
+
+#full-content .content-1 {
+  display: grid;
+  grid-template-columns: repeat(4, 25%); }
+  #full-content .content-1 .container {
+    padding: 4.5rem;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50rem; }
+    #full-content .content-1 .container i {
+      transition: all 0.3s; }
+    #full-content .content-1 .container p {
+      font-size: 1.7rem;
+      text-align: center;
+      color: white; }
+    #full-content .content-1 .container h1 {
+      font-size: 2rem;
+      padding: 2rem 0;
+      color: white; }
+    #full-content .content-1 .container.step-1 {
+      background-color: #5acda6; }
+    #full-content .content-1 .container.step-2 {
+      background-color: #91ac41; }
+    #full-content .content-1 .container.step-3 {
+      background-color: #e4b476; }
+    #full-content .content-1 .container.step-4 {
+      background-color: #f69dad; }
+  #full-content .content-1 .fa,
+  #full-content .content-1 .far {
+    font-size: 9.6rem;
+    color: white; }
+  #full-content .content-1 .fa:hover,
+  #full-content .content-1 .far:hover {
+    font-size: 10.4rem;
+    color: white; }
+
+#full-content .content-2 {
+  width: 100%;
+  background-color: #f7eee2;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  text-align: center; }
+  #full-content .content-2 #fresh-food-heading {
+    color: #91ac41;
+    font-size: 24px;
+    font-family: "Caveat", cursive;
+    margin: 0;
+    margin-top: 35px; }
+  #full-content .content-2 > h3 {
+    font-size: 44px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 8px; }
+  #full-content .content-2 #store-desc {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 auto;
+    color: #8b8b99;
+    letter-spacing: 0.5px;
+    margin-bottom: 55px; }
+  #full-content .content-2 #store-item-wrapper {
+    width: 100%;
+    max-width: 114rem;
+    display: flex;
+    justify-content: stretch;
+    margin: 0 auto; }
+    #full-content .content-2 #store-item-wrapper .store-item {
+      width: 25%;
+      text-align: center; }
+      #full-content .content-2 #store-item-wrapper .store-item h3 {
+        font-size: 24px;
+        font-weight: 600;
+        margin: 3rem 0; }
+      #full-content .content-2 #store-item-wrapper .store-item p {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        color: #8b8b99; }
+      #full-content .content-2 #store-item-wrapper .store-item .icon-wrapper {
+        display: inline-block;
+        background-color: #e4b476;
+        border-radius: 50%;
+        padding: 4rem;
+        margin: 2rem;
+        color: white;
+        transition: all 0.3s; }
+      #full-content .content-2 #store-item-wrapper .store-item .icon-wrapper:hover {
+        padding: 4.4rem;
+        margin: 1.6rem; }
+  #full-content .content-2 .fab,
+  #full-content .content-2 .fa {
+    font-size: 6rem; }
+
+#full-content .content-3 {
+  width: 100%;
+  background-color: white;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  text-align: center; }
+  #full-content .content-3 #fresh-food-heading2 {
+    color: #91ac41;
+    font-size: 24px;
+    font-family: "Caveat", cursive;
+    margin: 0;
+    margin-top: 35px; }
+  #full-content .content-3 > h3 {
+    font-size: 44px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 8px; }
+  #full-content .content-3 #store-desc2 {
+    max-width: 70rem;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 auto;
+    color: #8b8b99;
+    letter-spacing: 0.5px;
+    margin-bottom: 55px; }
+  #full-content .content-3 #testimonial-wrapper {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; }
+    #full-content .content-3 #testimonial-wrapper .testimonials-item {
+      width: 33%;
+      text-align: center;
+      background-color: #f5f6fb;
+      padding: 4rem 3rem;
+      margin: 1.6rem;
+      border-top-left-radius: 4.5rem;
+      border-bottom-left-radius: 4.5rem;
+      border-bottom-right-radius: 4.5rem;
+      transition: box-shadow 0.3s; }
+      #full-content .content-3 #testimonial-wrapper .testimonials-item img {
+        width: 80px;
+        margin-bottom: 2.5rem;
+        border-radius: 50%; }
+      #full-content .content-3 #testimonial-wrapper .testimonials-item p {
+        color: #8b8b99;
+        font-size: 1.6rem; }
+      #full-content .content-3 #testimonial-wrapper .testimonials-item h3 {
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 24px;
+        margin-bottom: 0px; }
+      #full-content .content-3 #testimonial-wrapper .testimonials-item .job-role {
+        color: #8b8b99;
+        font-size: 12px;
+        font-style: italic;
+        letter-spacing: 0.5px; }
+
+#full-content .content-4 {
+  display: flex;
+  justify-content: stretch; }
+  #full-content .content-4 .left-side {
+    width: 65%;
+    display: inline-block; }
+    #full-content .content-4 .left-side img {
+      width: 100%; }
+  #full-content .content-4 .right-side {
+    width: 35%;
+    display: inline-block;
+    background-image: url(https://edyoda.s3.ap-south-1.amazonaws.com/public/strawberry-white.png);
+    background-position: left;
+    background-size: cover;
+    text-align: center; }
+    #full-content .content-4 .right-side .text-wrapper {
+      margin: 11.5rem; }
+      #full-content .content-4 .right-side .text-wrapper h1 {
+        font-size: 4rem; }
+      #full-content .content-4 .right-side .text-wrapper p {
+        padding-top: 1rem;
+        color: #8b8b99;
+        font-size: 1.4rem; }
+      #full-content .content-4 .right-side .text-wrapper input {
+        margin: 0 auto;
+        display: block; }
+        #full-content .content-4 .right-side .text-wrapper input#subscribe-email {
+          width: 100%;
+          border: 0;
+          border-radius: 0.4rem;
+          font-weight: 500;
+          background-color: white;
+          padding: 1.2rem;
+          color: #8b8b99;
+          font-size: 1.6rem;
+          margin-top: 4rem; }
+        #full-content .content-4 .right-side .text-wrapper input#subscribe-btn {
+          text-transform: uppercase;
+          width: 50%;
+          padding: 1.2rem;
+          margin-top: 2rem;
+          font-size: 1.6rem;
+          border: 0;
+          border-radius: 0.4rem;
+          color: white;
+          background-color: #f69dad; }
+        #full-content .content-4 .right-side .text-wrapper input#subscribe-btn:hover {
+          background-color: white;
+          border-width: thin;
+          border-style: solid;
+          border-color: #f69dad;
+          color: #f69dad; }
+
+#full-content .content-5 {
+  width: 100%;
+  background-color: #f6fcfa; }
+  #full-content .content-5 .stats-wrapper {
+    width: 100%;
+    max-width: 114rem;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: stretch;
+    padding: 10rem 0; }
+    #full-content .content-5 .stats-wrapper .stats-item {
+      width: 25%;
+      padding: 0 6.4rem; }
+      #full-content .content-5 .stats-wrapper .stats-item h3 {
+        font-size: 4.4rem;
+        font-weight: 600;
+        margin: 0; }
+      #full-content .content-5 .stats-wrapper .stats-item p {
+        color: #57e3b5;
+        font-size: 1.4rem;
+        letter-spacing: 0.05rem;
+        font-style: italic;
+        margin: 0; }

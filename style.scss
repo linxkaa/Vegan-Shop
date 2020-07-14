@@ -1,0 +1,415 @@
+//!variabel
+$btn-green: rgb(170, 210, 54);
+$box-shadow: #ccc;
+$bg-yellow: #e4b476;
+$bg-green: #91ac41;
+$text-paragraph: #8b8b99;
+//!mixin
+@mixin dropdownContainerMenu {
+    width: 200px;
+    border-top: 2px solid $btn-green;
+    padding: 20px;
+    font-weight: 400;
+    position: absolute;
+    right: 20px;
+    margin-top: 1rem;
+    background-color: white;
+    box-shadow: 0 2px 5px $box-shadow;
+    display: none;
+}
+
+@mixin freshFoodHeading {
+    color: $bg-green;
+    font-size: 24px;
+    font-family: "Caveat", cursive;
+    margin: 0;
+    margin-top: 35px;
+}
+
+@mixin freshFoodh3 {
+    font-size: 44px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+@mixin freshFoodStoreDesc {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 auto;
+    color: #8b8b99;
+    letter-spacing: 0.5px;
+    margin-bottom: 55px;
+}
+
+//!Global
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+i {
+    font-style: normal;
+}
+
+//!Header
+header {
+    height: 100vh;
+    background-image: url(https://edyoda.s3.ap-south-1.amazonaws.com/public/landing-background.png);
+}
+
+// Navigation bar
+#menu__item {
+    font-size: 1.4rem;
+    display: flex;
+    font-weight: 600;
+    align-items: center;
+    background-color: transparent;
+    justify-content: space-between;
+    z-index: 999;
+    padding: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: background-color 200ms linear;
+    img {
+        width: 4rem;
+        height: 4rem;
+        margin-left: 2rem;
+    }
+    .menu__item-right {
+        .dropdown-container {
+            @include dropdownContainerMenu;
+        }
+        .menu__item-right-with-dropdown:hover .dropdown-container {
+            display: block;
+        }
+        .dropdown-item a {
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid $box-shadow;
+            padding: 1rem;
+            cursor: pointer;
+        }
+        .menu__item-right-with-dropdown {
+            display: inline-block;
+            position: relative;
+        }
+        .fa-caret-down::before {
+            content: "\f0d7";
+        }
+        a {
+            padding: 2rem;
+        }
+        .menu__item-right-buynow {
+            margin: 2rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: white;
+            background-color: $btn-green;
+            padding: 0.9rem 3.4rem;
+            border-radius: 0.4rem;
+        }
+    }
+}
+
+//Header Content
+.content-header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        font-size: 4.4rem;
+        font-weight: 600;
+        letter-spacing: 0.9rem;
+    }
+    p {
+        padding: 2rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        letter-spacing: 0.1rem;
+        color: #8b8b99;
+        text-align: center;
+        line-height: 2rem;
+        width: 60vw;
+    }
+}
+
+//!Main-content
+#full-content {
+    //content-1
+    .content-1 {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        .container {
+            padding: 4.5rem;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50rem;
+            i {
+                transition: all 0.3s;
+            }
+            p {
+                font-size: 1.7rem;
+                text-align: center;
+                color: white;
+            }
+            h1 {
+                font-size: 2rem;
+                padding: 2rem 0;
+                color: white;
+            }
+            &.step-1 {
+                background-color: #5acda6;
+            }
+            &.step-2 {
+                background-color: $bg-green;
+            }
+            &.step-3 {
+                background-color: $bg-yellow;
+            }
+            &.step-4 {
+                background-color: #f69dad;
+            }
+        }
+        .fa,
+        .far {
+            font-size: 9.6rem;
+            color: white;
+        }
+        .fa:hover,
+        .far:hover {
+            font-size: 10.4rem;
+            color: white;
+        }
+    }
+    //!content-2
+    .content-2 {
+        width: 100%;
+        background-color: #f7eee2;
+        padding-top: 75px;
+        padding-bottom: 75px;
+        text-align: center;
+        #fresh-food-heading {
+            @include freshFoodHeading;
+        }
+        >h3 {
+            @include freshFoodh3;
+        }
+        #store-desc {
+            @include freshFoodStoreDesc;
+        }
+        #store-item-wrapper {
+            width: 100%;
+            max-width: 114rem;
+            display: flex;
+            justify-content: stretch;
+            margin: 0 auto;
+            .store-item {
+                width: 25%;
+                text-align: center;
+                h3 {
+                    font-size: 24px;
+                    font-weight: 600;
+                    margin: 3rem 0;
+                }
+                p {
+                    font-size: 16px;
+                    letter-spacing: 0.5px;
+                    font-weight: 500;
+                    color: $text-paragraph;
+                }
+                .icon-wrapper {
+                    display: inline-block;
+                    background-color: $bg-yellow;
+                    border-radius: 50%;
+                    padding: 4rem;
+                    margin: 2rem;
+                    color: white;
+                    transition: all 0.3s;
+                }
+                .icon-wrapper:hover {
+                    padding: 4.4rem;
+                    margin: 1.6rem;
+                }
+            }
+        }
+        .fab,
+        .fa {
+            font-size: 6rem;
+        }
+    }
+    //!content-3
+    .content-3 {
+        width: 100%;
+        background-color: white;
+        padding-top: 75px;
+        padding-bottom: 75px;
+        text-align: center;
+        #fresh-food-heading2 {
+            @include freshFoodHeading;
+        }
+        >h3 {
+            @include freshFoodh3;
+        }
+        #store-desc2 {
+            max-width: 70rem;
+            @include freshFoodStoreDesc;
+        }
+        #testimonial-wrapper {
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            .testimonials-item {
+                width: 33%;
+                text-align: center;
+                background-color: #f5f6fb;
+                padding: 4rem 3rem;
+                margin: 1.6rem;
+                border-top-left-radius: 4.5rem;
+                border-bottom-left-radius: 4.5rem;
+                border-bottom-right-radius: 4.5rem;
+                transition: box-shadow 0.3s;
+                img {
+                    width: 80px;
+                    margin-bottom: 2.5rem;
+                    border-radius: 50%;
+                }
+                p {
+                    color: $text-paragraph;
+                    font-size: 1.6rem;
+                }
+                h3 {
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin-top: 24px;
+                    margin-bottom: 0px;
+                }
+                .job-role {
+                    color: $text-paragraph;
+                    font-size: 12px;
+                    font-style: italic;
+                    letter-spacing: 0.5px;
+                }
+            }
+        }
+    }
+    //!content-4
+    .content-4 {
+        display: flex;
+        justify-content: stretch;
+        .left-side {
+            width: 65%;
+            display: inline-block;
+            img {
+                width: 100%;
+            }
+        }
+        .right-side {
+            width: 35%;
+            display: inline-block;
+            background-image: url(https://edyoda.s3.ap-south-1.amazonaws.com/public/strawberry-white.png);
+            background-position: left;
+            background-size: cover;
+            text-align: center;
+            .text-wrapper {
+                margin: 11.5rem;
+                h1 {
+                    font-size: 4rem;
+                }
+                p {
+                    padding-top: 1rem;
+                    color: $text-paragraph;
+                    font-size: 1.4rem;
+                }
+                input {
+                    margin: 0 auto;
+                    display: block;
+                    &#subscribe-email {
+                        width: 100%;
+                        border: 0;
+                        border-radius: 0.4rem;
+                        font-weight: 500;
+                        background-color: white;
+                        padding: 1.2rem;
+                        color: $text-paragraph;
+                        font-size: 1.6rem;
+                        margin-top: 4rem;
+                    }
+                    &#subscribe-btn {
+                        text-transform: uppercase;
+                        width: 50%;
+                        padding: 1.2rem;
+                        margin-top: 2rem;
+                        font-size: 1.6rem;
+                        border: 0;
+                        border-radius: 0.4rem;
+                        color: white;
+                        background-color: #f69dad;
+                    }
+                    &#subscribe-btn:hover {
+                        background-color: white;
+                        border-width: thin;
+                        border-style: solid;
+                        border-color: #f69dad;
+                        color: #f69dad;
+                    }
+                }
+            }
+        }
+    }
+    //!content-5
+    .content-5 {
+        width: 100%;
+        background-color: #f6fcfa;
+        .stats-wrapper {
+            width: 100%;
+            max-width: 114rem;
+            display: flex;
+            margin: 0 auto;
+            text-align: center;
+            justify-content: stretch;
+            padding: 10rem 0;
+            .stats-item {
+                width: 25%;
+                padding: 0 6.4rem;
+                h3 {
+                    font-size: 4.4rem;
+                    font-weight: 600;
+                    margin: 0;
+                }
+                p {
+                    color: #57e3b5;
+                    font-size: 1.4rem;
+                    letter-spacing: 0.05rem;
+                    font-style: italic;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    //!content-6
+}
